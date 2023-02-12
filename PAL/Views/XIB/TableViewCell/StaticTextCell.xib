@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StaticTextCell" rowHeight="87" id="KGk-i7-Jjw" customClass="StaticTextCell" customModule="PAL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="626" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="626" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH6-4W-8O1">
+                        <rect key="frame" x="15.5" y="0.0" width="595" height="87"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-JQ-cZT">
+                        <rect key="frame" x="15.5" y="33" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-Lh-Vbj">
+                        <rect key="frame" x="570.5" y="23.5" width="45" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="rlB-Ef-2mq"/>
+                            <constraint firstAttribute="width" constant="45" id="vhU-X4-Afg"/>
+                        </constraints>
+                        <state key="normal" image="Icon_See All">
+                            <color key="titleColor" name="Color_lightSky"/>
+                        </state>
+                        <connections>
+                            <action selector="btnSeeAllClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PXc-mY-pzU"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-bD-IEc">
+                        <rect key="frame" x="515.5" y="26.5" width="55" height="34"/>
+                        <state key="normal" title="See All">
+                            <color key="titleColor" name="Color_lightSky"/>
+                        </state>
+                        <connections>
+                            <action selector="btnSeeAllClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Uc-rM-bzU"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gaa-JQ-cZT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Z9-cQ-eQ0"/>
+                    <constraint firstItem="GM3-Lh-Vbj" firstAttribute="trailing" secondItem="NH6-4W-8O1" secondAttribute="trailing" constant="5" id="GUh-Ll-gzZ"/>
+                    <constraint firstItem="GM3-Lh-Vbj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ipg-QJ-7vP"/>
+                    <constraint firstAttribute="bottom" secondItem="NH6-4W-8O1" secondAttribute="bottom" id="JPP-WD-RJ5"/>
+                    <constraint firstItem="NH6-4W-8O1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Jme-rm-Y5X"/>
+                    <constraint firstItem="NH6-4W-8O1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.95" priority="750" id="O0H-Uh-hNY"/>
+                    <constraint firstItem="gaa-JQ-cZT" firstAttribute="leading" secondItem="NH6-4W-8O1" secondAttribute="leading" id="SEA-W3-NPr"/>
+                    <constraint firstItem="GM3-Lh-Vbj" firstAttribute="leading" secondItem="PwZ-bD-IEc" secondAttribute="trailing" id="YTg-dl-wT8"/>
+                    <constraint firstItem="NH6-4W-8O1" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.95" id="cFb-N6-z84"/>
+                    <constraint firstItem="NH6-4W-8O1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ega-ut-451"/>
+                    <constraint firstItem="PwZ-bD-IEc" firstAttribute="height" secondItem="GM3-Lh-Vbj" secondAttribute="height" multiplier="0.85" id="uSg-qi-8Ir"/>
+                    <constraint firstItem="PwZ-bD-IEc" firstAttribute="centerY" secondItem="GM3-Lh-Vbj" secondAttribute="centerY" id="wLZ-ff-N31"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnAction" destination="PwZ-bD-IEc" id="oyH-rN-Lg0"/>
+                <outlet property="btnActionArrow" destination="GM3-Lh-Vbj" id="gBo-8z-17f"/>
+                <outlet property="lblName" destination="gaa-JQ-cZT" id="YrE-pl-aLU"/>
+                <outlet property="nslcViewWidth" destination="cFb-N6-z84" id="zkl-JX-UXd"/>
+            </connections>
+            <point key="canvasLocation" x="362.31884057971018" y="124.88839285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_See All" width="24" height="11.5"/>
+        <namedColor name="Color_lightSky">
+            <color red="0.3843137254901961" green="0.73725490196078436" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
