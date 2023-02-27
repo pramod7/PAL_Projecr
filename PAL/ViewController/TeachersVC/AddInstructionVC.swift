@@ -14,7 +14,11 @@ class AddInstructionVC: UIViewController,UICollectionViewDelegate,UICollectionVi
     //MARK: - Outlets
     @IBOutlet var collectionInstructionView: UICollectionView!
     @IBOutlet var collectionVoiceInstructionView: UICollectionView!
-    @IBOutlet var txtInstruction : PALTextField!
+    @IBOutlet var txtInstruction : PALTextField!{
+        didSet{
+//            self.txtInstruction.
+        }
+    }
     @IBOutlet var collectionHightConstrain: NSLayoutConstraint!
     @IBOutlet var collectionVoiceHeightConstrain: NSLayoutConstraint!
     @IBOutlet var btnAssignWorksheet : UIButton!{

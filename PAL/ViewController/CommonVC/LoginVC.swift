@@ -30,7 +30,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nslcTopViewHeight: NSLayoutConstraint!
     @IBOutlet weak var nslcbtnLoginWidth: NSLayoutConstraint!
     @IBOutlet weak var nslcbtnLoginHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var imgEyes: UIImageView!
+    @IBOutlet weak var btnEyes: UIButton!{
+        didSet{           
+            self.btnEyes.setTitle("", for: .normal)
+        }
+    }
     //MARK: - Button Click
     @IBAction func btnLoginClick(_ sender: Any) {
         self.signInValidation()
@@ -44,6 +49,18 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBAction func btnForgotPass(_ sender: Any) {
         let nextVC = ForgotPasswordVC.instantiate(fromAppStoryboard: .Main)
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func btnVisible(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected{
+            imgEyes.image = UIImage(named: "Icon_visiblity")
+            txtPassword.isSecureTextEntry = false
+        }
+        else {
+            imgEyes.image = UIImage(named: "Icon_unvisible")
+            txtPassword.isSecureTextEntry = true
+        }
     }
     
     //MARK: - local variable
